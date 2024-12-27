@@ -84,7 +84,7 @@ function Menu(){
     </main>
   )
 }
-function Book(Book){
+{/*function Book(Book){
   return(
     <div>
      <img src={Book.photoName} alt={Book.name}/>
@@ -95,8 +95,9 @@ function Book(Book){
     </div>
   );
 }
+*/}
 
-{/*function Books(){
+function Books(){
   return(
     <div>
     <img src='books/Image1.png' alt='Bookk' />
@@ -107,7 +108,7 @@ function Book(Book){
     <img src='books/Photo3.png' alt='book' />
     </div>
   )
-}*/}
+}
 
 function Footer(){gi
   const hour=new Date().getHours();
