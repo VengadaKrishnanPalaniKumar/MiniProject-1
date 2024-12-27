@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import Home from './Components/Home';
 //import App from './App';
-import reportWebVitals from './reportWebVitals';
+ import reportWebVitals from './reportWebVitals';
  
-const Databook=[
+const dataBook=[
   {
     name:"The Chelembra bank robbery",
     author:"Anirban Bhattacharyya ",
@@ -58,18 +59,19 @@ const Databook=[
 function App(){
   return(
     <div className="container">
+      <Home />
       <Header />
       <Menu />
-      <Books />
+      <Book />
+      <Footer />
     </div>
-  );
-}
+  );}
 
 function Header(){
   const style={};
   return( 
     <header className="header">
-    <h1 style={style}>Book Store</h1>
+    <h1 style={style}>Book Shop</h1>
     </header>
   );
 }
@@ -78,23 +80,23 @@ function Menu(){
     <main className="menu">
       <h2 style={{color:"red"}}>BOOKS</h2>
       <p>Start read and read lots of book and place is very peaceful.</p>
-      <ul className="books">{Databook.map((book)=>(<book name={book.name}/>))}</ul>
+      <ul className="book">{dataBook.map((book)=>(<book name={book.name}/>))}</ul>
     </main>
   )
 }
-{/*function Books(props){
-  console.log (props);
+function Book(Book){
   return(
     <div>
-     <img src={props.photoName} alt={props.name}/>
+     <img src={Book.photoName} alt={Book.name}/>
      <div>
-    <h3>{props.name}</h3>
-    <p>{props.author}</p>
+    <h3>{Book.name}</h3>
+    <p>{Book.author}</p>
     </div>
     </div>
   );
-}*/}
-function Books(){
+}
+
+{/*function Books(){
   return(
     <div>
     <img src='books/Image1.png' alt='Bookk' />
@@ -105,9 +107,9 @@ function Books(){
     <img src='books/Photo3.png' alt='book' />
     </div>
   )
-}
+}*/}
 
-{/*function Footer(){
+function Footer(){gi
   const hour=new Date().getHours();
   const openHour=8;
   console.log(openHour);
@@ -117,7 +119,7 @@ function Books(){
   console.log(isOpen);
  //if (hour=>openhour && hour<=closedhour) alertWe are close");
    // else alert("sorry");
-}*/}
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
