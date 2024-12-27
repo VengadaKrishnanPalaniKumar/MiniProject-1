@@ -62,7 +62,7 @@ function App(){
       <Home />
       <Header />
       <Menu />
-      <Book />
+      <Books />
       <Footer />
     </div>
   );}
@@ -110,7 +110,7 @@ function Books(){
   )
 }
 
-function Footer(){gi
+function Footer(){
   const hour=new Date().getHours();
   const openHour=8;
   console.log(openHour);
