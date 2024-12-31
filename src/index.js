@@ -80,22 +80,26 @@ function Menu(){
     <main className="menu">
       <h2 style={{color:"red"}}>BOOKS</h2>
       <p>Start read and read lots of book and place is very peaceful.</p>
-      <ul className="book">{dataBook.map((book)=>(<book name={book.name}/>))}</ul>
+    <ul className="book">{dataBook.map((book)=>(<book name={book.name}/>))}</ul>
+      {/*<ul className="book">{dataBook.map((book)=>(<Book pizzaObj={book}/>))}</ul>*/}
+
     </main>
   )
 }
-{/*function Book(Book){
+{/*function Books(props){
+  console.log(props);
   return(
     <div>
-     <img src={Book.photoName} alt={Book.name}/>
+          <img src={props.pizzaObj.photoName} alt={props.pizzaObj.name}/>.
+
      <div>
     <h3>{Book.name}</h3>
     <p>{Book.author}</p>
     </div>
     </div>
   );
-}
-*/}
+}*/}
+
 
 function Books(){
   return(
@@ -112,15 +116,23 @@ function Books(){
 
 function Footer(){
   const hour=new Date().getHours();
-  const openHour=8;
-  console.log(openHour);
-  const closeHour=24;
-  console.log(closeHour);
+  const openHour=16;
+  const closeHour=22;
   const isOpen= hour >= openHour && hour <= closeHour;
   console.log(isOpen);
- //if (hour=>openhour && hour<=closedhour) alertWe are close");
-   // else alert("sorry");
+  //if (hour=>openhour && hour<=closedhour) alert("We are close");
+  //  else alert("sorry");
+if(!isOpen) return(<p>Shop is closed See you soon.</p>);
+  return(
+     <footer className="footer">
+        <div>
+        <p>We are open until  {closeHour}:00.Come an visit again or order online.</p>
+        <button className="btn">Get</button>
+        </div>
+      </footer>)
+  //return React.createElement("footer",null, "we are open")
 }
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

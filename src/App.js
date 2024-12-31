@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+{/*import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //import Navbar from "./components/Navbar";
@@ -40,5 +40,32 @@ function App() {
     </div>
   );
 }
+
+export default App;
+*/}
+
+
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from 'src./components/Navbar'; // Assuming you have a Navbar component
+import Home from './pages/Home'; // Import the Home component
+import Books from './pages/Books'; // Import other components as needed
+import About from './pages/About';
+import Contact from './pages/Contact';
+
+const App = () => {
+  return (
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/books" component={Books} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+      </Switch>
+    </Router>
+  );
+};
 
 export default App;

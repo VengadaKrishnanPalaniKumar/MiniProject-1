@@ -1,0 +1,14 @@
+/* src/pages/Home.css */
+.home {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .home h2 {
+    color: #333;
+  }
+  
+  .home p {
+    color: #666;
+  }
+  
