@@ -1,4 +1,4 @@
-{/*import React from "react";
+import React from "react";
 import Navbar from "./Navbar";
 function Home(){
     return(
@@ -9,8 +9,8 @@ function Home(){
     );
 }
 export default Home
-*/}
-  // src/pages/Home.js
+
+{/*  // src/pages/Home.js
 import React from 'react';
 import './Home.css'; // Import your CSS for styling
 
@@ -24,3 +24,4 @@ const Home = () => {
 };
 
 export default Home;
+*/}
